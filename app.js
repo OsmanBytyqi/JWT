@@ -6,7 +6,7 @@ const app = express();
 
 // middleware
 app.use(express.static('public'));
-
+app.use(express.json());
 // view engine
 app.set('view engine', 'ejs');
 const connstr = "mongodb+srv://osmani:osmani1.@mani.5y7yi.mongodb.net/node-auth?retryWrites=true&w=majority";
