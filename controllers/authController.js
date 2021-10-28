@@ -8,11 +8,16 @@ const login_get=(req,res)=>{
 
 const singup_post=(req,res)=>{
 
+    const {email,password}=req.body;
+
     res.send(" new sign up");
 }
 
 
 const login_post=(req,res)=>{
+    const {email,password}=req.body;
+    console.log(email,password)
+
     res.send(" user login");
 }
 
