@@ -14,8 +14,8 @@ const connstr = "mongodb+srv://osmani:osmani1.@mani.5y7yi.mongodb.net/node-auth?
 // database connection
 
 mongoose.connect(connstr, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
-  .then(result=> console.log('your server is running at http://localhost:3000'))
+  .then(result => app.listen(3001))
+  .then(result=> console.log('your server is running at http://localhost:3001'))
   .catch(err => console.log(err));
 
 
