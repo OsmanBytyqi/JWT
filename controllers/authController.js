@@ -36,7 +36,7 @@ const handleErrors = (err) => {
   }
 
 
-const singup_get=(req,res)=>{
+const signup_get=(req,res)=>{
     res.render('signup');
 }
 
@@ -44,7 +44,7 @@ const login_get=(req,res)=>{
     res.render('login');
 }
 
-const singup_post=async (req,res)=>{
+const signup_post=async (req,res)=>{
 
      const { email, password } = req.body;
 
@@ -72,9 +72,9 @@ const login_post=async (req,res)=>{
 
 
 module.exports={
-    singup_get,
+    signup_get,
     login_get,
-    singup_post,
+    signup_post,
     login_post
 }
 
