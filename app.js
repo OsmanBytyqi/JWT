@@ -1,14 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes=require('./routes/authRoutes')
-const cookieParser = require('cookie-parser');
+//const cookieParser = require('cookie-parser');
 
 const app = express();
 
 // middleware
 app.use(express.static('public'));
 app.use(express.json());
-app.use(cookieParser);
 // view engine
 app.set('view engine', 'ejs');
 const connstr = "mongodb+srv://osmani:osmani1.@mani.5y7yi.mongodb.net/node-auth?retryWrites=true&w=majority";
@@ -28,6 +27,10 @@ app.get('/smoothies', (req, res) => res.render('smoothies'));
 app.use(authRoutes);
 
 //cookies
+
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 
 
 app.get('/set-cookies', (req, res) => {
