@@ -1,9 +1,8 @@
 const User=require('../models/User');
-const jwt=require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 
 
-//   }
 const handleErrors = (err) => {
     console.log(err.message, err.code);
     let errors = { email: '', password: '' };
@@ -27,6 +26,9 @@ const handleErrors = (err) => {
   }
 
 
+
+
+=======
   /// jsonwebtoken
 
   const maxAge = 3 * 24 * 60 * 60;
@@ -37,7 +39,7 @@ const handleErrors = (err) => {
   };
 
 
-  //routes
+
 
 const signup_get=(req,res)=>{
     res.render('signup');
@@ -47,7 +49,9 @@ const login_get=(req,res)=>{
     res.render('login');
 }
 
-const signup_post=async (req,res)=>{
+const signup_post= async (req, res) => {
+  const { email, password } = req.body;
+
 
      const { email, password } = req.body;
 
@@ -64,6 +68,7 @@ const signup_post=async (req,res)=>{
 
     
 }
+ 
 
 
 const login_post=async (req,res)=>{
