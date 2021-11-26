@@ -28,7 +28,7 @@ const handleErrors = (err) => {
 
 
 
-//=======
+
   /// jsonwebtoken
 
   const maxAge = 3 * 24 * 60 * 60;
@@ -53,7 +53,6 @@ const signup_post= async (req, res) => {
   const { email, password } = req.body;
 
 
-     //const { email, password } = req.body;
 
     try {
       const user = await User.create({ email, password });
